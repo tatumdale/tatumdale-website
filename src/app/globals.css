@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --brand-pink: #F02878;
+  --brand-navy: #01285C;
+  --brand-navy-light: #1a4a7a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+@layer utilities {
+  .text-gradient-pink {
+    background: linear-gradient(135deg, #F02878 0%, #ff5a9e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .bg-gradient-pink {
+    background: linear-gradient(135deg, #F02878 0%, #ff5a9e 100%);
+  }
+  
+  .glow-pink {
+    box-shadow: 0 0 30px rgba(240, 40, 120, 0.4);
+  }
+}
