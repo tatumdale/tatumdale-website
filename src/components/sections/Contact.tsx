@@ -19,13 +19,13 @@ export default function Contact({ design }: ContactProps) {
               <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
-              Book a Discovery Call
+              Book a Free Consultation
             </a>
             <a href="mailto:tatum@tatumdale.com" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors">
               <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              Email Me
+              Get in Touch
             </a>
           </div>
           
@@ -48,10 +48,10 @@ export default function Contact({ design }: ContactProps) {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="https://calendar.app.google/pA4Awi9UnE4PfhkC9" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 bg-[#01285C] text-white rounded-full font-semibold text-lg hover:bg-[#01285C]/90 transition-colors">
-              Book a Discovery Call
+              Book a Free Consultation
             </a>
             <a href="mailto:tatum@tatumdale.com" className="inline-flex items-center justify-center px-8 py-4 border-2 border-[#01285C]/20 text-[#01285C] rounded-full font-semibold text-lg hover:border-[#01285C]/40 transition-colors">
-              Send an Email
+              Get in Touch
             </a>
           </div>
           
@@ -76,13 +76,13 @@ export default function Contact({ design }: ContactProps) {
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
           <a href="https://calendar.app.google/pA4Awi9UnE4PfhkC9" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#F02878] to-[#ff5a9e] text-white rounded-lg font-semibold text-lg hover:shadow-xl hover:shadow-[#F02878]/30 transition-all">
-            Book a Discovery Call
+            Book a Free Consultation
             <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </a>
           <a href="mailto:tatum@tatumdale.com" className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-white rounded-lg font-semibold text-lg hover:bg-white/5 transition-colors">
-            Send an Email
+            Get in Touch
           </a>
         </div>
         

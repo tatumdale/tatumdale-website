@@ -9,7 +9,6 @@ export default function Footer({ design }: FooterProps) {
   
   const socialLinks = [
     { label: 'LinkedIn', url: 'https://linkedin.com/in/tatumbisley' },
-    { label: 'Twitter', url: 'https://twitter.com/tatumdale' },
   ]
 
   if (design === 'bold') {

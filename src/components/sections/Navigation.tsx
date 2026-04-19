@@ -17,15 +17,18 @@ export default function Navigation({ design }: NavigationProps) {
   }, [])
 
   const navLinks = [
-    { label: 'About', href: '#about' },
-    { label: 'Services', href: '#services' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Products', href: '#products' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'PMOS Workspace', href: 'https://www.pmosworkspace.com/', external: true },
+    { label: 'About', href: '#about', external: false },
+    { label: 'Services', href: '#services', external: false },
+    { label: 'Case Studies', href: '#casestudies', external: false },
+    { label: 'Contact', href: '#contact', external: false },
   ]
 
   const baseStyles = 'fixed top-0 left-0 right-0 z-40 transition-all duration-300'
-  
+
+  const linkProps = (link: typeof navLinks[0]) =>
+    link.external ? { target: '_blank' as const, rel: 'noopener noreferrer' } : {}
+
   if (design === 'bold') {
     return (
       <nav className={`${baseStyles} ${scrolled ? 'bg-[#01285C]/95 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
@@ -34,7 +37,12 @@ export default function Navigation({ design }: NavigationProps) {
             <img src="/assets/logos/logo-light.png" alt="Tatumdale" className="h-10" />
             <div className="hidden md:flex items-center gap-8">
               {navLinks.map(link => (
-                <a key={link.label} href={link.href} className="text-white/80 hover:text-white text-sm font-medium transition-colors relative group">
+                <a
+                  key={link.label}
+                  href={link.href}
+                  {...linkProps(link)}
+                  className="text-white/80 hover:text-white text-sm font-medium transition-colors relative group"
+                >
                   {link.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#F02878] transition-all group-hover:w-full" />
                 </a>
@@ -56,7 +64,13 @@ export default function Navigation({ design }: NavigationProps) {
           {mobileOpen && (
             <div className="md:hidden pt-4 pb-2">
               {navLinks.map(link => (
-                <a key={link.label} href={link.href} className="block py-3 text-white/80 hover:text-white text-sm font-medium" onClick={() => setMobileOpen(false)}>
+                <a
+                  key={link.label}
+                  href={link.href}
+                  {...linkProps(link)}
+                  className="block py-3 text-white/80 hover:text-white text-sm font-medium"
+                  onClick={() => !link.external && setMobileOpen(false)}
+                >
                   {link.label}
                 </a>
               ))}
@@ -78,7 +92,12 @@ export default function Navigation({ design }: NavigationProps) {
             <img src="/assets/logos/logo-dark.png" alt="Tatumdale" className="h-10" />
             <div className="hidden md:flex items-center gap-10">
               {navLinks.map(link => (
-                <a key={link.label} href={link.href} className="text-[#01285C]/70 hover:text-[#01285C] text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#F02878] hover:after:w-full after:transition-all">
+                <a
+                  key={link.label}
+                  href={link.href}
+                  {...linkProps(link)}
+                  className="text-[#01285C]/70 hover:text-[#01285C] text-sm font-medium transition-colors relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#F02878] hover:after:w-full after:transition-all"
+                >
                   {link.label}
                 </a>
               ))}
@@ -99,7 +118,13 @@ export default function Navigation({ design }: NavigationProps) {
           {mobileOpen && (
             <div className="md:hidden pt-4 pb-2">
               {navLinks.map(link => (
-                <a key={link.label} href={link.href} className="block py-3 text-[#01285C]/70 hover:text-[#01285C] text-sm font-medium" onClick={() => setMobileOpen(false)}>
+                <a
+                  key={link.label}
+                  href={link.href}
+                  {...linkProps(link)}
+                  className="block py-3 text-[#01285C]/70 hover:text-[#01285C] text-sm font-medium"
+                  onClick={() => !link.external && setMobileOpen(false)}
+                >
                   {link.label}
                 </a>
               ))}
@@ -121,7 +146,12 @@ export default function Navigation({ design }: NavigationProps) {
           <img src="/assets/logos/logo-light.png" alt="Tatumdale" className="h-10" />
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map(link => (
-              <a key={link.label} href={link.href} className="text-white/70 hover:text-white text-sm font-medium transition-colors">
+              <a
+                key={link.label}
+                href={link.href}
+                {...linkProps(link)}
+                className="text-white/70 hover:text-white text-sm font-medium transition-colors"
+              >
                 {link.label}
               </a>
             ))}
@@ -142,7 +172,13 @@ export default function Navigation({ design }: NavigationProps) {
         {mobileOpen && (
           <div className="md:hidden pt-4 pb-2">
             {navLinks.map(link => (
-              <a key={link.label} href={link.href} className="block py-3 text-white/70 hover:text-white text-sm font-medium" onClick={() => setMobileOpen(false)}>
+              <a
+                key={link.label}
+                href={link.href}
+                {...linkProps(link)}
+                className="block py-3 text-white/70 hover:text-white text-sm font-medium"
+                onClick={() => !link.external && setMobileOpen(false)}
+              >
                 {link.label}
               </a>
             ))}
